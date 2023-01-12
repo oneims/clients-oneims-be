@@ -71,6 +71,9 @@
     },
     "company": {
       "type": "string"
+    },
+    "progress": {
+      "type": "json"
     }
   }
 }
