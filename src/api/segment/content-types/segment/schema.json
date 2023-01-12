@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "segments",
+  "info": {
+    "singularName": "segment",
+    "pluralName": "segments",
+    "displayName": "Segment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "formJson": {
+      "type": "json"
+    },
+    "onboarding": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::onboarding.onboarding",
+      "inversedBy": "segments"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

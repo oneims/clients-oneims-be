@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "onboardings",
+  "info": {
+    "singularName": "onboarding",
+    "pluralName": "onboardings",
+    "displayName": "Onboarding",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "segments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::segment.segment",
+      "mappedBy": "onboarding"
+    }
+  }
+}
