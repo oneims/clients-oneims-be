@@ -13,19 +13,22 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "videoId": {
       "type": "string"
     },
     "formJson": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "onboarding": {
       "type": "relation",
@@ -35,7 +38,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     }
   }
 }
