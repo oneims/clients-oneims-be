@@ -10,14 +10,15 @@ module.exports = {
     const toEmailAddress = body.toEmailAddress;
     const subject = body.subject;
     const fromEmailAddress = "pbokhari@oneims.com";
-    const html = body.html;
+    const dynamicTemplateData = body.dynamicTemplateData;
     try {
       await strapi.plugins["email"].services.email.send({
         to: toEmailAddress,
         from: fromEmailAddress,
         replyTo: fromEmailAddress,
         subject,
-        html,
+        template_id: "d-eb91560f281b45b49c7c55bbb12df74b",
+        dynamicTemplateData,
       });
       ctx.send({ message: "Email sent" });
     } catch (err) {
