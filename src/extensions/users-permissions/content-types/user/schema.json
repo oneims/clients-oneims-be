@@ -74,6 +74,12 @@
     },
     "progress": {
       "type": "json"
+    },
+    "organization": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization.organization",
+      "inversedBy": "users"
     }
   }
 }
