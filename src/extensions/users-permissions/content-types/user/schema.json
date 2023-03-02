@@ -63,13 +63,7 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "firstName": {
-      "type": "string"
-    },
-    "lastName": {
-      "type": "string"
-    },
-    "company": {
+    "name": {
       "type": "string"
     },
     "progress": {
@@ -80,6 +74,15 @@
       "relation": "manyToOne",
       "target": "api::organization.organization",
       "inversedBy": "users"
+    },
+    "basecampId": {
+      "type": "string"
+    },
+    "client": {
+      "type": "boolean"
+    },
+    "avatarUrl": {
+      "type": "string"
     }
   }
 }
